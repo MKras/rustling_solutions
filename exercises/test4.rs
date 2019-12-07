@@ -5,7 +5,14 @@
 
 // Write a macro that passes the test! No hints this time, you can do it!
 
-// I AM NOT DONE
+pub mod macros {
+    #[macro_export]
+    macro_rules! my_macro {
+        ($var:expr) => {
+            format!("Hello {}", $var)
+        }
+    }
+}
 
 fn main() {
     if my_macro!("world!") != "Hello world!" {
